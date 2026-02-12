@@ -206,6 +206,7 @@ Event Sequence:
 *World* will generate the standard narrative output:
 
    - First check the *Event Sequence* produced by *Game Master* in `Step 4: Output Event Sequence`.
+       - **Narrative Start Anchor::** Begin the narration (and location header) from the Player's **starting position** as defined by the *Game Master*.
    - Fill in the general details of the outline with details from the original Player input and from the *Game Master* rulings.
    - Once all items within the *Event Sequence* have been covered:
        - If the *Event Sequence* ends with an *Unexpected Consequence* or an *Unexpected Event*, you must stop the narrative, describe the narrative presentation of the *Unexpected Consequence* or *Unexpected Event*, and then stop your narrative (continue to Step 5).
