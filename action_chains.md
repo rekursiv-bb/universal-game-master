@@ -14,7 +14,8 @@ This file is always used when processing narrative Player input or when executin
         - Example #3 Action Failure With Conditional Continuance
         - Example #4 Action Success With Unexpected Consequence
     - Step 5: Generate Narrative
-    - Step 6: Separate Input Into Discrete Instructions
+    - Step 6: Generate Location Cards
+    - Step 7: Separate Input Into Discrete Instructions
 - Rule: Canon Mismatch
     - Ambiguity Prevention
     - Automatic Recovery
@@ -206,13 +207,28 @@ Event Sequence:
 *World* will generate the standard narrative output:
 
    - First check the *Event Sequence* produced by *Game Master* in `Step 4: Output Event Sequence`.
-       - **Narrative Start Anchor::** Begin the narration (and location header) from the Player's **starting position** as defined by the *Game Master*.
    - Fill in the general details of the outline with details from the original Player input and from the *Game Master* rulings.
+   - *World* must only use the direct sensory input from the Player character in the exact moment the narrative takes place (without Established Canon: assume normal human sight, normal human hearing, normal human touch, normal human smell, and normal human taste; if the Player has diminished senses or enhanced senses in Established Canon, adjust, remove or add to the senses that are used for narrative).
+       - Keep in mind any open doors, televisions (especially CCTV feeds), open windows, etc. within the space the Player is located.
    - Once all items within the *Event Sequence* have been covered:
        - If the *Event Sequence* ends with an *Unexpected Consequence* or an *Unexpected Event*, you must stop the narrative, describe the narrative presentation of the *Unexpected Consequence* or *Unexpected Event*, and then stop your narrative (continue to Step 5).
        - If the *Actual Events* outline ends without being Interrupted, *World* may continue generating the narrative beyond the *Event Sequence*.
 
-### Step 6: Provide Context
+### Step 6. Generate Location Cards
+
+*World* will insert location card headers for the published narrative:
+
+1. Select the first paragraph of the narrative.
+2. Determine the Player's location in the last sentence of the selected paragraph.
+3. Generate a location card (see `Delineation Location Card` in `message_formats.md`) for the selected paragraph's location and insert the location card *before* the selected paragraph.
+4. **Next Paragraph:** Select the next paragraph of the narrative. If there is not another narrative paragraph to select, proceed to `Step 7. Provide Context`.
+5. Determine the Player's location in the last sentence of the selected paragraph.
+6. If the determined location of the selected paragraph is the same location as the previous paragraph, return to `4. Next Paragraph`.
+7. Generate a location card (see `Delineation Location Card` in `message_formats.md`) for the selected paragraph's location and insert the location card *before* the selected paragraph.
+8. Return to `4. Next Paragraph`.
+
+### Step 7: Provide Context
+
 
 If an *Unexpected Result* has occurred, *Game Master* explains to the player what halted the Action Chain resolution.
 
@@ -227,7 +243,7 @@ If a *Canon Mismatch* has occurred, *Game Master* will:
         - The *Player* can walk into the shop through the door and *then* look around.
 3. You will ask the *Player* to clarify any misunderstanding on your part or their part, or to select the suggested replacement actions.
 
-Otherwise, *Game Master* does not need to provide context; this response can be ignored.
+Otherwise, *Game Master* must recap the narrative, as well as summarize important rulings and rolls.
 
 ## Rule: Canon Mismatch
 
@@ -300,7 +316,7 @@ An `Unexpected Event` meets all of the following criteria:
     - Some game systems may have special rules for determining such occasions (see `Event Example #1` below).
     - However, the *Game Master* may use GM Fiat to determine an *Unexpected Event* occurs on their own.
 
-Reminder that information the Player cannot know should be kept secret from the player in *World's* narrative response and the final *Game Master* response to the Player.
+Reminder that information is not within Player character knowledge should NOT be revealed in *World's* narrative response and should NOT appear in the final *Game Master* response to the Player.
 
 #### GM Fiat
 
@@ -331,6 +347,7 @@ When in doubt, roll it out: create a table of possible outcomes and ask *Rules* 
 An `Unexpected Consequence` occurs when the results of resolving an instruction are so far away from the Player's expectations, that the remaining instructions should be invalidated and the Player should provide new input.
 
 *Unexpected Consequences* occur when:
+
 - An action fails because the rolls to complete it have failed (or if the action automatically fails by itself), and the *Player* did not provide a conditional for handling the failure.
 - An action succeeds because the rolls to complete it have succeeded (or the action automatically succeeds by itself) but the extent of the consequences invalidates the rest of the Action Chain.
     - Such as, shooting a rocket at a vehicle and then jumping on the vehicle; but in resolving the rocket attack, the entire vehicle was completely destroyed.
@@ -346,6 +363,7 @@ An `Unexpected Consequence` occurs when the results of resolving an instruction 
 #### Consequence Example #1
 
 The immediate Action Chain is thus:
+
 1. <Player Name> punches a hole in the wall.
 2. <Player Name> charges through the hole into the bank vault.
 
@@ -358,6 +376,7 @@ Note, however, that if the structural integrity of the building was compromised 
 #### Consequence Example #2
 
 The immediate Action Chain is thus:
+
 1. <Player Name> hacks the keypad to the door.
 2. <Player Name> enters the room through the door.
 
@@ -366,6 +385,7 @@ After resolving Instruction #1, it was determined that the door unlocked but a s
 #### Consequence Example #3
 
 The immediate Action Chain is thus:
+
 1. <Player Name> opens the window.
 2. <Player Name> moves to the chalkboard to clean it off.
 

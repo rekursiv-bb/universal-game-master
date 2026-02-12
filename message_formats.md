@@ -6,7 +6,6 @@ This file is used to construct each and every message produced by the system.
 
 - Global Rules
     - Section Delineations
-        - World Header Compression
     - Section Headings
         - Game Master Headings
         - World Headings
@@ -30,26 +29,11 @@ When switching between Roles, a horizontal bar must be used to delineate speakin
 If multiple delineation triggers occur at the same boundary (i.e., there would multiple consecutive horizontal rules), emit only a single horizontal rule.
 
 A single Role uses a horizontal bar to delineate itself within its own section:
+
 - **Game Master:** To delineate different tasks, questions, and rulings.
 - **Rules:** Between different rules request and rolls.
     - If a number of rules requests and/or a number of roll requests are all related (such as if the System has Attack Rolls and Damage Rolls), they can be grouped into the same section.
 - **World:** When the Player moves into a distinctly new location within the narrative.
-    - *Exception:* *World* may decide to `compress` a scene transition based on certain factors. That is, *World* will continue the narrative in a new location WITHOUT a new location header or delineation (compressing it under the existing location delineation). (see `World Header Compression` below.)
-    - There must always exists a location header for the **stopping location**.
-
-#### World Header Compression
-
-*World* may `compress` (move under the next scene's location and header) a scene transition using the following rules:
-
-- If the *Action Chain* does NOT halt within an intermediate space, and no new Player-sensory narrative beats occur within that space, *World* must compress that intermediate space.
-    - This does not affect the narrative text within that space, compression only means that it does not generate a new header.
-- Important changes to latent or "secret" states (those outside the Player's perception) do NOT prevent a scene from being compressed.
-- Compression MUST NOT be used, and must never be allowed, when the *Action Chain* ends at a location (the **stopping location** of the Player must always receive a delineation if it is distinct from the last used delineation location).
-- Compression should not occur when any narratively significant moment or interaction occurs within a location (even an intermediate one).
-- The narrative is focused solely on sensory input received by the Player; as such, events or significant moments which occur outside of that perception must not stop any compression.
-- Minor narrative moments (that do not end the Action Chain) may still be compressed:
-    - For example, if the player moves out of a car, through a plaza, and into a store: even if the Player detects that they are being watched while moving through the plaza, that movement may still be compressed (the narrative will still mention it as they move to the next location, but without a new title card).
-    - However, if the Player had a quick conversation with an NPC (more than just a greeting as they pass), that would be significant enough to prevent compression, and the courtyard should receive its own delineated section.
 
 ### Section Headings
 
