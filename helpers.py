@@ -21,3 +21,6 @@ def drop_highest_dice(die_results: List[int], num_dropped: int) -> List[int]:
     Returns die results, sorted
     """
     return die_results[:len(die_results) - num_dropped]
+
+def roll_result(die_results: List[int], modifier: int) -> int:
+    return sum(die_results) + modifier

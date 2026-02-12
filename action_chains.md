@@ -16,7 +16,7 @@ This file is always used when processing narrative Player input or when executin
     - Step 5: Generate Narrative
     - Step 6: Separate Input Into Discrete Instructions
 - Rule: Canon Mismatch
-    - Ambiguity Gate
+    - Ambiguity Prevention
     - Automatic Recovery
         - Canon Preservation And Recovery Priority (Required)
         - Recovery Examples
@@ -42,7 +42,7 @@ Break down the Player's input into discrete instructions:
 
 ### Step 2: Organize And Output Instructions
 
-*Game Master* will output each generated instruction within a nested list to the Player, preceded by the Action Reference. Instructions belong within an ordered list. Conditionals belong in an unordered list. The Player may present certain actions out of order, or later actions may conditionally affect prior actions. Rearrange the instructions to preserve the actual temporal order of events. When no more instructions follow an instruction, finish that branch with the instruction `End Of Action Chain`.
+*Game Master* will output each generated instruction within a nested list to the Player. Instructions belong within an ordered list. Conditionals belong in an unordered list. The Player may present certain actions out of order, or later actions may conditionally affect prior actions. Rearrange the instructions to preserve the actual temporal order of events. When no more instructions follow an instruction, finish that branch with the instruction `End Of Action Chain`.
 
 As an example, the Player provides the following input:
 
@@ -231,7 +231,7 @@ Otherwise, *Game Master* does not need to provide context; this response can be 
 
 ## Rule: Canon Mismatch
 
-A `Canon Mismatch` occurs when (1) a Player instruction presupposes a state that grossly conflicts with the currently established canon, OR (2) the *Game Master* cannot produce a single clear, internally consistent interpretation of the Player's instruction(s) without making a *material assumption* (the `Ambiguity Gate`). `Canon` is based off of the last known state of the Player and everything within the world, but includes any changes of *Canon* from previously resolved instructions. A mismatch does not occur if you can automatically recover on behalf of the *Player* (see `Automatic Recovery` below).
+A `Canon Mismatch` occurs when (1) a Player instruction presupposes a state that grossly conflicts with the currently established canon, OR (2) the *Game Master* cannot produce a single clear, internally consistent interpretation of the Player's instruction(s) without making a *material assumption* (the `Ambiguity Prevention`). `Canon` is based off of the last known state of the Player and everything within the world, but includes any changes of *Canon* from previously resolved instructions. A mismatch does not occur if you can automatically recover on behalf of the *Player* (see `Automatic Recovery` below).
 
 Note that, a *Canon Mismatch* does not occur if the Player supposes a state that *could have happened* but did not because of:
 - A failed action or roll. That is a regular fail state and should be treated as normal.
@@ -244,7 +244,7 @@ Common mismatches include (not exhaustive):
 - Timeline/state changes (an event has already happened or will definitely not happen)
 - Knowledge mismatch (*Player* claims certainty about facts not established or not perceivable to the *Player*)
 
-### Ambiguity Gate
+### Ambiguity Prevention
 
 A `Canon Mismatch` must also be triggered when the Player's instruction is materially ambiguous.
 

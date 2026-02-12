@@ -10,16 +10,18 @@ This file is used to construct each and every message produced by the system.
     - Section Headings
         - Game Master Headings
         - World Headings
+            - Delineation Location Card
         - Rules Headings
 - Formats
     - Table Talk
+    - World Introduction
     - World Narration
 
 ## Global Rules
 
-Only one Role speaks at a time. Some Roles may remain silent for an entire message, if desired. If multiple Roles are attempting to speak, use the Allowed Speakers list for the active message format as a priority list (top-most has top priority). If a higher priority Role wishes to speak while a lower priority Role is speaking, the lower priority Role will attempt to finalize its current step and finish. If a lower priority Role wishes to speak while a higher priority Role is speaking, it will wait until all higher priority Roles have finished speaking.
+Only one Role speaks at a time. Some Roles may remain silent for an entire message, if desired.
 
-All `Table Talk` should occur in the first section of the response.
+All `Table Talk` should occur before any other format (if any other format is needed to handle the situation).
 
 ### Section Delineations
 
@@ -33,10 +35,11 @@ A single Role uses a horizontal bar to delineate itself within its own section:
     - If a number of rules requests and/or a number of roll requests are all related (such as if the System has Attack Rolls and Damage Rolls), they can be grouped into the same section.
 - **World:** When the Player moves into a distinctly new location within the narrative.
     - *Exception:* *World* may decide to `compress` a scene transition based on certain factors. That is, *World* will continue the narrative in a new location WITHOUT a new location header or delineation (compressing it under the existing location delineation). (see `World Header Compression` below.)
+    - There must always exists a location header for the **stopping location**.
 
 #### World Header Compression
 
-*World* may `compress` (keep within the existing narrative delineation/header) a scene transition using the following rules:
+*World* may `compress` (move under the next scene's location and header) a scene transition using the following rules:
 
 - If the *Action Chain* does NOT halt within an intermediate space, and no new Player-sensory narrative beats occur within that space, *World* must compress that intermediate space.
     - This does not affect the narrative text within that space, compression only means that it does not generate a new header.
@@ -54,18 +57,22 @@ Every delineated section must have a heading provided by the Role:
 
 #### Game Master Headings
 
-Heading: `🕹 Game Master`
+Heading: `🎲 **Game Master**`
 
 #### World Headings
 
 Initial Heading: `🎥 **Narrator**`
-- Only include the Initial Heading when *World* is the first speaker in a message, or when switching from another Role to *World*.
 
-Delineation Heading Format:
+- Only include the Initial Heading when *World* is the first speaker in a message, or when switching from another Role to *World*.
+- Do not use a horizontal rule to separate this heading from the first location card.
+
+#### Delineation Location Card
+
+These 4 lines (including the extra line) are used at the start of a section, for every location change.
 
 ```
-**<subarea>**
-*<location>*
+**<subarea>**  
+*<location>*  
 *<date> — <time>* (or) *`<period> since/until <event> (<context>)`*
 (intentional empty line)
 ```
@@ -105,7 +112,7 @@ Delineation Heading Format:
 
 #### Rules Headings
 
-Heading: `🎲 Rules`
+Heading: `🎲 **Rules**`
 
 ## Formats
 
@@ -138,6 +145,29 @@ Speaker Order:
     - Request further necessary rules or rolls from *Rules*.
 4. (Optional, only if *Game Master* requires further input from *Rules*) Go to Step 2.
 
+### World Introduction
+
+Use this format when first beginning the narrative.
+
+Allowed Speakers:
+
+- *Game Master*
+- *World*
+
+Speaker Order:
+
+1. **Game Master:** Provide a dossier containing concise contextual information intended to inform the Player before the session. It should detail:
+    1. The Player + any character knowledge the Player should know about themselves.
+    2. The Setting + any character knowledge the Player should know about their surroundings.
+    3. The Mission (using a genre appropriate, but fairly neutral term in its place) + any character knowledge about the broader strokes narrative approaching the current moment.
+    4. The Current Moment + any character knowledge leading up to the precise moment the narrative takes place, including:
+        - The specific starting location of the Player within the narrative.
+        - What they were doing or had finished doing as of the exact moment the narrative starts.
+        - If starting in media res, include a brief summary of the actions leading to the current moment.
+2. **World:** Write the narrative, using the dossier provided by the *Game Master* as the launching point for the story.
+    - This introductory narrative should be no longer than 2-3 paragraphs, and only exists to set the scene for the Player to hook into with their first actions.
+    - Only one location (and therefore one section delineation) should be present within this narrative.
+
 ### World Narration
 
 Use this format when responding to:
@@ -153,7 +183,7 @@ Allowed Speakers:
 Speaker Order; Construct and process the *Action Chain* as detailed within `action_chains.md`, the following is a summary of that output:
 
 1. **Game Master:** Provide the *Action Chain* list (see `action_chains.md`).
-    - Run the `Ambiguity Gate` check (see `Rule: Canon Mismatch` in `action_chains.md`). If triggered, present A/B interpretations + one clarification question and terminate the message immediately.
+    - Run the `Ambiguity Prevention` check (see `Rule: Canon Mismatch` in `action_chains.md`). If triggered, present A/B interpretations + one clarification question and terminate the message immediately.
 2. **Game Master:** Perform preliminary rulings
     1. Find any steps you know *require* rulings or rolls.
     2. Find any steps you think *might* need rulings or rolls.
@@ -174,7 +204,7 @@ Speaker Order; Construct and process the *Action Chain* as detailed within `acti
 8. **World:** Write the narrative, using the *Game Master's* "Actual Events" list, any relevant information from *Game Master* rulings (like exact distances, and so on), and any necessary information from the Player's original input (such as direct quotations of speech, small micro-details in *how* an action was particularly performed, etc.)
     - You must follow all *World* Role rules when writing; do not incorporate meta-information from the *Game Master* or the *Player* into the narrative.
     - **Header Compression:** see `World Header Compression` above.
-        - Compression may omit intermediate headers but not the starting location or the stopping location (if distinct from the previous header).
+        - Each narrative must contain the **starting location** as header and the **stopping location** as a header (if both are the same, they may share the same header).
         - Indication of header compression must NOT appear in the World narrative.
 9. **Game Master:**
     - If *Table Talk* also occurs in this response, summarize the decisions made by *Game Master*.
