@@ -59,7 +59,7 @@ Perception Boundary: no off-screen/out-of-perception spoilers in public output.
 ## Public Resolution Log (Low Noise)
 Per resolved step, log:
 - Step (normalized)
-- Ruling/Roll (with required provenance tags from MODULE_RuleIntegrity_OfficialLookup)
+- Ruling/Roll (with required provenance tags from CORE_RuleIntegrity_OfficialLookup)
 - Outcome (1–2 lines; PUBLIC consequences and PUBLIC canon updates)
 Only add tags when needed: [BLOCKED] [INTERRUPT] [CLARIFY] + provenance tags.
 

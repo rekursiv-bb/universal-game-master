@@ -23,18 +23,21 @@
 - CORE_WorldNarration_Backbone:
   - Use whenever WN is enabled and the player provides in-fiction content.
   - Covers stepwise adjudication, public log, narration, wrap, on-screen-now state.
-- MODULE_RuleIntegrity_OfficialLookup:
+- CORE_RuleIntegrity_OfficialLookup:
   - Use whenever making a mechanical claim or verifying a rule.
+- CORE_PresentationClarifications:
+  - Use when player-controlled presentation details are required to resolve an action.
 - MODULE_SecretsLedger:
   - Use whenever secrets/off-screen/out-of-perception events exist.
-- MODULE_PresentationClarifications:
-  - Use when player-controlled presentation details are required to resolve an action.
+- MODULE_Voices:
+  - Optional style layer (how text is written), may be applied per section.
 
 ## File Index (Names Only)
 - BASE (this file)
 - BOOTSTRAP_System+Setting
 - BOOTSTRAP_NarrativeStart
 - CORE_WorldNarration_Backbone
-- MODULE_RuleIntegrity_OfficialLookup
+- CORE_RuleIntegrity_OfficialLookup
+- CORE_PresentationClarifications
 - MODULE_SecretsLedger
-- MODULE_PresentationClarifications
+- MODULE_Voices

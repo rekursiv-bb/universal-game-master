@@ -1,4 +1,4 @@
-# MODULE_RuleIntegrity_OfficialLookup (Stops Made-Up Rules + Enforces Verification)
+# CORE_RuleIntegrity_OfficialLookup (Stops Made-Up Rules + Enforces Verification)
 
 ## Rules Source Priority (Strict; System-Selected)
 When stating/using any mechanical fact:

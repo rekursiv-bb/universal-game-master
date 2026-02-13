@@ -1,4 +1,4 @@
-# MODULE_PresentationClarifications (Batched; No “Assumption” Tag)
+# CORE_PresentationClarifications (Batched; No “Assumption” Tag)
 
 ## Principle: GM Runs the World; Player Controls Presentation Choices
 - GM-owned: world state (mood, baseline NPC attitudes, schedules, factions, off-screen plans).
